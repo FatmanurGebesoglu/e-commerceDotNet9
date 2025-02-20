@@ -30,6 +30,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles(); // static dosyalar dışarı açılır (images)
+
 app.UseCors(opt => {
     opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
 });
